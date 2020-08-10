@@ -1,8 +1,9 @@
-<div id=a><iframe width="853" height="480" src="https://www.youtube.com/embed/w0T-0Pt6iK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-<button onclick="xvel-=10">Left</button</button>
-<button onclick="xvel-=-10">Right</button</button>
-<button onclick="yvel-=10">Up</button</button>
-<button onclick="yvel-=-10">Down</button</button>
+<div id=a><iframe width="1280" height="720" src="https://www.youtube.com/embed/w0T-0Pt6iK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<button onclick="xvel-=10">Left</button>
+<button onclick="xvel-=-10">Right</button>
+<button onclick="yvel-=10">Up</button>
+<button onclick="yvel-=-10">Down</button>
+<h1>You can also use wasd</h1>
 <style>
     #a {
 height:100px;
@@ -11,11 +12,10 @@ background:linear-gradient(45deg, yellow, gold, gold, black);
 border:black solid;
 border-radius:50%;
 position:absolute;
-animation:spin 2s infinite linear;
+animation:spin 5s infinite linear;
 filter:sepia(0%);
 }
     button {
-font-family:creata;
 background:black;
 color:white;
 border:indigo;
@@ -26,6 +26,7 @@ height:100px;
     }
     body {
 overflow:hidden;
+font-family:arial;
     }
     @keyframes spin {
         0%{transform:rotate(0deg);}
@@ -64,12 +65,11 @@ ything += yvel;
 if (xvel>0) {xvel-=0.01}
 if (xvel<0) {xvel+=0.01}
 if (yvel<15) {yvel-=-0.1}
-if (ything>855) {yvel=yvel*-0.9; ything=855;}
+if (ything>screen.height) {yvel=yvel*-0.9; ything=screen.height;}
 if (ything<0) {yvel=yvel*-0.9; ything=0;}
-if (xthing>855) {xvel=xvel*-0.9; xthing=855;}
+if (xthing>screen.width) {xvel=xvel*-0.9; xthing=screen.width;}
 if (xthing<0) {xvel=xvel*-0.9; xthing=0;}
 
 }, 10
 );
 </script>
- 
